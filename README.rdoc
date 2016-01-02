@@ -1,6 +1,25 @@
 == README
 
 This is test application of ruby on rails
+Important command
+
+* rake db:migrate
+* rails server -b 0.0.0
+* rake routes
+* rails generate scaffold Article title:string description:text
+* git commit -m "type message to commit"
+* git add -A
+* rails new project name
+* cd "change directory" and cd .. go to back directory
+* heroku keys:add
+* heroku create
+* heroku login
+* bundle install --without production
+* cat ~/.ssh/id_rsa.pub "getting public key"
+* git config --global user.email "omshiv2415@yahoo.co.uk"
+* git config --global user.name "omshiv2415"
+* git checkout -f
+* git config
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
