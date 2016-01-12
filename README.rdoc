@@ -73,6 +73,8 @@ enter email and password
 
 8. git push heroku master
 
+9. heroku run rake db:migrate
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
