@@ -75,6 +75,12 @@ enter email and password
 
 9. heroku run rake db:migrate
 
+
+10. Deploy changes
+ git add -A
+ git commit -am "make it better"
+ git push heroku master
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
