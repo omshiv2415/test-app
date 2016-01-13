@@ -46,7 +46,7 @@ git push -u origin master
 
 git checkout -b create-users
 rails generate migration create_users
-
+//add
 
 // Deploy ruby application to heroku
 
