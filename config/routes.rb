@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :articles
   resources :articles
   resources :articles
+	resources :users, except: [:new]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -15,7 +16,7 @@ Rails.application.routes.draw do
    get 'admin/admin_login_page', to: 'admin#admin_login_page'
    get '/articles', to: 'articles#index'
 
-
+ get 'signup', to: 'users#new'
 
 
 
