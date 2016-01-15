@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
-
+	before_action :require_user, except: [:index, :show]
+	before_action :require_same_user, only: [:edit, :update, :destroy]
 
 
   # GET /articles
@@ -27,7 +28,7 @@ class ArticlesController < ApplicationController
   # POST /articles.json
   def create
     @article = Article.new(article_params)
-		@article.user
+		@article.user = current_user
     respond_to do |format|
       if @article.save
         format.html { redirect_to @article, notice: 'Article was successfully created.' }
@@ -73,4 +74,12 @@ class ArticlesController < ApplicationController
     def article_params
       params.require(:article).permit(:title, :description)
     end
+
+	  def  require_same_user
+			if current_user != @article.user
+				flash[:danger] ="You can only edit or delete your articles"
+				redirect_to articles_path
+			end
+    end
+
 end

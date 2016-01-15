@@ -77,7 +77,7 @@ enter email and password
 
 
 10. Deploy changes
-
+cd
 11. heroku apps:rename msc-abc-bank
  git add -A
  git commit -am "make it better"
