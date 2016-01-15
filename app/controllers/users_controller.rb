@@ -11,7 +11,7 @@ def create
 @user = User.new(user_params)
 if @user.save
 	session[:user_id] = @user.id
-flash[:success] = "Welcome to the alpha blog #{@user.username}"
+	flash[:success] = "Welcome to Internet Banking #{@user.username}"
 	redirect_to user_path(@user)
 else
 render 'new'
