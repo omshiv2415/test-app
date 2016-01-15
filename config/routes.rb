@@ -15,8 +15,7 @@ Rails.application.routes.draw do
    get 'admin/admin_home_page', to: 'admin#admin_home_page'
    get 'admin/admin_login_page', to: 'admin#admin_login_page'
    get '/articles', to: 'articles#index'
-
- get 'signup', to: 'users#new'
+   get 'signup', to: 'users#new'
 
 
 
