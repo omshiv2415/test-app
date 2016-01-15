@@ -3,7 +3,6 @@ class ArticlesController < ApplicationController
 	before_action :require_user, except: [:index, :show]
 	before_action :require_same_user, only: [:edit, :update, :destroy]
 
-
   # GET /articles
   # GET /articles.json
   def index
